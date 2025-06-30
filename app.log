@@ -1,0 +1,22 @@
+2025-06-30 12:12:59,681 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-06-30 12:12:59,681 - INFO - Model loaded successfully from model/mental_health_model-2.h5
+2025-06-30 12:12:59,740 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-30 12:12:59,741 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-30 12:12:59,742 - INFO -  * Restarting with stat
+2025-06-30 12:13:11,133 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-06-30 12:13:11,142 - INFO - Model loaded successfully from model/mental_health_model-2.h5
+2025-06-30 12:13:11,159 - WARNING -  * Debugger is active!
+2025-06-30 12:13:11,173 - INFO -  * Debugger PIN: 751-974-018
+2025-06-30 12:13:11,551 - INFO - 127.0.0.1 - - [30/Jun/2025 12:13:11] "GET / HTTP/1.1" 200 -
+2025-06-30 12:13:23,081 - INFO - Prediction: Anxiety (74.14%) - Time: 0.229s
+2025-06-30 12:13:23,089 - INFO - 127.0.0.1 - - [30/Jun/2025 12:13:23] "POST / HTTP/1.1" 200 -
+2025-06-30 12:14:07,566 - INFO - 127.0.0.1 - - [30/Jun/2025 12:14:07] "GET / HTTP/1.1" 200 -
+2025-06-30 12:18:22,965 - INFO - 127.0.0.1 - - [30/Jun/2025 12:18:22] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-06-30 12:24:53,332 - INFO - 127.0.0.1 - - [30/Jun/2025 12:24:53] "GET / HTTP/1.1" 200 -
+2025-06-30 12:24:53,595 - INFO - 127.0.0.1 - - [30/Jun/2025 12:24:53] "[33mGET /static/images/favicon.png HTTP/1.1[0m" 404 -
+2025-06-30 12:25:06,941 - INFO - Prediction: Loneliness (41.23%) - Time: 0.155s
+2025-06-30 12:25:06,947 - INFO - 127.0.0.1 - - [30/Jun/2025 12:25:06] "POST / HTTP/1.1" 200 -
+2025-06-30 12:26:06,502 - INFO - Prediction: Loneliness (41.23%) - Time: 0.119s
+2025-06-30 12:26:06,504 - INFO - 127.0.0.1 - - [30/Jun/2025 12:26:06] "POST / HTTP/1.1" 200 -
+2025-06-30 12:26:10,847 - INFO - 127.0.0.1 - - [30/Jun/2025 12:26:10] "GET / HTTP/1.1" 200 -

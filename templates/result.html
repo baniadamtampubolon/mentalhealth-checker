@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prediction Result</title>
+  <link rel="icon" type="image/png" href="/static/images/favicon.png?v=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      --success-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+      --warning-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+      --info-gradient: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+      --glass-bg: rgba(255, 255, 255, 0.25);
+      --glass-border: rgba(255, 255, 255, 0.18);
+      --text-primary: #2d3748;
+      --text-secondary: #4a5568;
+      --shadow-soft: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+      --shadow-glow: 0 0 50px rgba(102, 126, 234, 0.3);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .floating-shapes {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    .shape {
+      position: absolute;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      animation: float 6s ease-in-out infinite;
+    }
+
+    .shape:nth-child(1) {
+      width: 100px;
+      height: 100px;
+      top: 20%;
+      left: 15%;
+      animation-delay: 0s;
+    }
+
+    .shape:nth-child(2) {
+      width: 150px;
+      height: 150px;
+      top: 60%;
+      right: 15%;
+      animation-delay: 2s;
+    }
+
+    .shape:nth-child(3) {
+      width: 80px;
+      height: 80px;
+      top: 30%;
+      left: 75%;
+      animation-delay: 4s;
+    }
+
+    .shape:nth-child(4) {
+      width: 120px;
+      height: 120px;
+      bottom: 20%;
+      left: 20%;
+      animation-delay: 1s;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0.7; }
+      50% { transform: translateY(-30px) rotate(180deg); opacity: 1; }
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    .results-card {
+      background: var(--glass-bg);
+      backdrop-filter: blur(20px);
+      border: 1px solid var(--glass-border);
+      border-radius: 24px;
+      box-shadow: var(--shadow-soft);
+      position: relative;
+      overflow: hidden;
+      margin: 2rem 0;
+      animation: slideUp 0.8s ease-out;
+    }
+
+    @keyframes slideUp {
+      from {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .results-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: var(--success-gradient);
+    }
+
+    .card-header {
+      text-align: center;
+      padding: 3rem 2rem 2rem;
+      background: rgba(255, 255, 255, 0.1);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      position: relative;
+    }
+
+    .results-icon {
+      font-size: 4rem;
+      color: rgba(255, 255, 255, 0.9);
+      margin-bottom: 1rem;
+      display: inline-block;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+
+    .results-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: white;
+      margin-bottom: 0.5rem;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .results-subtitle {
+      font-size: 1.1rem;
+      color: rgba(255, 255, 255, 0.8);
+      font-weight: 300;
+    }
+
+    .results-content {
+      padding: 3rem 2rem;
+    }
+
+    .prediction-card {
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 20px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+      border-left: 6px solid #4facfe;
+      position: relative;
+      overflow: hidden;
+      animation: fadeInScale 1s ease-out 0.3s both;
+    }
+
+    @keyframes fadeInScale {
+      from {
+        opacity: 0;
+        transform: scale(0.9);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .prediction-card::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -50%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(45deg, transparent, rgba(79, 172, 254, 0.1), transparent);
+      transform: rotate(45deg);
+      animation: shimmer 3s infinite;
+    }
+
+    @keyframes shimmer {
+      0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+      100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+    }
+
+    .prediction-label {
+      font-size: 1.2rem;
+      color: var(--text-secondary);
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+    }
+
+    .prediction-result {
+      font-size: 2.5rem;
+      font-weight: 700;
+      background: var(--success-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .confidence-badge {
+      display: inline-block;
+      background: var(--info-gradient);
+      color: white;
+      padding: 0.5rem 1.5rem;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      margin-top: 1rem;
+      box-shadow: 0 4px 15px rgba(67, 233, 123, 0.3);
+    }
+
+    .chart-container {
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 20px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+      animation: fadeInScale 1s ease-out 0.6s both;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .chart-container::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--primary-gradient);
+    }
+
+    .chart-title {
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 1.5rem;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+
+    .chart-image {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .chart-image:hover {
+      transform: scale(1.02);
+    }
+
+    .action-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+    }
+
+    .btn-try-again {
+      background: var(--primary-gradient);
+      border: none;
+      border-radius: 50px;
+      padding: 1rem 3rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: white;
+      transition: all 0.3s ease;
+      box-shadow: var(--shadow-soft);
+      position: relative;
+      overflow: hidden;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .btn-try-again::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+      transition: left 0.5s;
+    }
+
+    .btn-try-again:hover::before {
+      left: 100%;
+    }
+
+    .btn-try-again:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-glow);
+      color: white;
+    }
+
+    .btn-download {
+      background: var(--warning-gradient);
+      border: none;
+      border-radius: 50px;
+      padding: 1rem 2.5rem;
+      font-size: 1rem;
+      font-weight: 600;
+      color: white;
+      transition: all 0.3s ease;
+      box-shadow: var(--shadow-soft);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .btn-download:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 0 30px rgba(240, 147, 251, 0.4);
+      color: white;
+    }
+
+    .disclaimer {
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 16px;
+      padding: 1.5rem;
+      margin-top: 2rem;
+      border-left: 4px solid #f093fb;
+      animation: fadeInScale 1s ease-out 0.9s both;
+    }
+
+    .disclaimer-title {
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .disclaimer-text {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+
+    .stat-card {
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 16px;
+      padding: 1.5rem;
+      text-align: center;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+      animation: fadeInScale 1s ease-out calc(0.2s * var(--delay)) both;
+    }
+
+    .stat-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .stat-icon {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      background: var(--primary-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .stat-value {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      display: block;
+    }
+
+    .stat-label {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      font-weight: 500;
+    }
+
+    @media (max-width: 768px) {
+      .results-title {
+        font-size: 2rem;
+      }
+      
+      .prediction-result {
+        font-size: 2rem;
+      }
+      
+      .action-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .btn-try-again, .btn-download {
+        width: 100%;
+        max-width: 300px;
+      }
+      
+      .stats-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .loading-spinner {
+      display: none;
+      width: 40px;
+      height: 40px;
+      border: 4px solid rgba(255, 255, 255, 0.3);
+      border-top: 4px solid white;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      margin: 0 auto;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <div class="floating-shapes">
+    <div class="shape"></div>
+    <div class="shape"></div>
+    <div class="shape"></div>
+    <div class="shape"></div>
+  </div>
+
+  <div class="container">
+    <div class="results-card">
+      <div class="card-header">
+        <i class="fas fa-chart-line results-icon"></i>
+        <h1 class="results-title">Analysis Complete</h1>
+        <p class="results-subtitle">Your mental health assessment results are ready</p>
+      </div>
+
+      <div class="results-content">
+        <div class="prediction-card">
+          <div class="prediction-label">
+            <i class="fas fa-brain"></i> Predicted Mental Health Status
+          </div>
+          <div class="prediction-result">{{ label }}</div>
+          <p style="color: var(--text-secondary); line-height: 1.6;">
+            Based on your responses, our AI model has analyzed your mental health indicators. 
+            This prediction serves as a preliminary assessment and should not replace professional medical advice.
+          </p>
+          <div class="confidence-badge">
+            <i class="fas fa-certificate"></i> AI Analysis Complete
+          </div>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat-card" style="--delay: 1;">
+            <div class="stat-icon">
+              <i class="fas fa-calendar-check"></i>
+            </div>
+            <span class="stat-value">{{ current_date }}</span>
+            <div class="stat-label">Assessment Date</div>
+          </div>
+          
+          <div class="stat-card" style="--delay: 2;">
+            <div class="stat-icon">
+              <i class="fas fa-clipboard-list"></i>
+            </div>
+            <span class="stat-value">28</span>
+            <div class="stat-label">Questions Analyzed</div>
+          </div>
+          
+          <div class="stat-card" style="--delay: 3;">
+            <div class="stat-icon">
+              <i class="fas fa-stopwatch"></i>
+            </div>
+            <span class="stat-value">&lt; 1 sec</span>
+            <div class="stat-label">Processing Time</div>
+          </div>
+        </div>
+
+        <div class="chart-container">
+          <h3 class="chart-title">
+            <i class="fas fa-chart-bar"></i>
+            Prediction Confidence Analysis
+          </h3>
+          <img src="data:image/png;base64,{{ plot_url }}" class="chart-image" alt="Mental Health Analysis Chart">
+        </div>
+
+        <div class="disclaimer">
+          <div class="disclaimer-title">
+            <i class="fas fa-info-circle"></i>
+            Important Disclaimer
+          </div>
+          <div class="disclaimer-text">
+            This assessment is for informational purposes only and is not intended as a substitute for professional mental health diagnosis or treatment. 
+            If you're experiencing mental health concerns, please consult with a qualified healthcare professional or mental health specialist. 
+            In case of emergency or suicidal thoughts, contact your local emergency services or a mental health crisis hotline immediately.
+          </div>
+        </div>
+
+        <div class="action-buttons">
+          <a href="/" class="btn-try-again">
+            <i class="fas fa-redo-alt"></i>
+            Take Assessment Again
+          </a>
+          <button class="btn-download" onclick="downloadResults()">
+            <i class="fas fa-download"></i>
+            Download Results
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Add entrance animations
+    document.addEventListener('DOMContentLoaded', function() {
+      // Animate elements on load
+      const animatedElements = document.querySelectorAll('.prediction-card, .chart-container, .disclaimer');
+      animatedElements.forEach((element, index) => {
+        element.style.animationDelay = `${index * 0.3}s`;
+      });
+
+      // Add hover effects to stat cards
+      const statCards = document.querySelectorAll('.stat-card');
+      statCards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+          this.style.transform = 'translateY(-5px) scale(1.02)';
+          this.style.boxShadow = '0 15px 35px rgba(0, 0, 0, 0.15)';
+        });
+
+        card.addEventListener('mouseleave', function() {
+          this.style.transform = 'translateY(0) scale(1)';
+          this.style.boxShadow = '0 8px 25px rgba(0, 0, 0, 0.1)';
+        });
+      });
+    });
+
+    // Download results functionality
+    function downloadResults() {
+      const button = event.target.closest('.btn-download');
+      const originalText = button.innerHTML;
+      
+      // Show loading state
+      button.innerHTML = '<div class="loading-spinner" style="display: inline-block; width: 20px; height: 20px; border: 2px solid rgba(255,255,255,0.3); border-top: 2px solid white; margin-right: 8px;"></div>Preparing...';
+      button.disabled = true;
+
+      // Simulate download process
+      setTimeout(() => {
+        // Create a simple text report
+        const resultText = `
+Mental Health Assessment Report
+================================
+Date: ${new Date().toLocaleDateString()}
+Result: {{ label }}
+Questions Analyzed: 28
+Processing Time: < 1 second
+
+DISCLAIMER:
+This assessment is for informational purposes only and is not intended as a substitute for professional mental health diagnosis or treatment.
+        `;
+
+        const blob = new Blob([resultText], { type: 'text/plain' });
+        const url = window.URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'mental-health-assessment-results.txt';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        window.URL.revokeObjectURL(url);
+
+        // Reset button
+        button.innerHTML = originalText;
+        button.disabled = false;
+      }, 2000);
+    }
+
+    // Add smooth hover effects to buttons
+    document.querySelectorAll('.btn-try-again, .btn-download').forEach(button => {
+      button.addEventListener('mouseenter', function() {
+        this.style.transform = 'translateY(-3px) scale(1.02)';
+      });
+
+      button.addEventListener('mouseleave', function() {
+        this.style.transform = 'translateY(0) scale(1)';
+      });
+    });
+
+    // Add click ripple effect
+    document.querySelectorAll('.btn-try-again, .btn-download').forEach(button => {
+      button.addEventListener('click', function(e) {
+        const ripple = document.createElement('span');
+        const rect = this.getBoundingClientRect();
+        const size = Math.max(rect.width, rect.height);
+        const x = e.clientX - rect.left - size / 2;
+        const y = e.clientY - rect.top - size / 2;
+        
+        ripple.style.width = ripple.style.height = size + 'px';
+        ripple.style.left = x + 'px';
+        ripple.style.top = y + 'px';
+        ripple.style.position = 'absolute';
+        ripple.style.borderRadius = '50%';
+        ripple.style.background = 'rgba(255, 255, 255, 0.3)';
+        ripple.style.transform = 'scale(0)';
+        ripple.style.animation = 'ripple 0.6s linear';
+        ripple.style.pointerEvents = 'none';
+        
+        this.appendChild(ripple);
+        
+        setTimeout(() => {
+          ripple.remove();
+        }, 600);
+      });
+    });
+
+    // Add CSS for ripple animation
+    const style = document.createElement('style');
+    style.textContent = `
+      @keyframes ripple {
+        to {
+          transform: scale(4);
+          opacity: 0;
+        }
+      }
+    `;
+    document.head.appendChild(style);
+  </script>
+</body>
+</html>
