@@ -223,13 +223,9 @@ scikit-learn==1.3.0
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ## 👥 Authors
 
-- **Your Name** - *Initial work* - [YourGitHub](https://github.com/yourusername)
+- **Adam Tampubolon** - *Initial work* - [YourGitHub](https://github.com/baniadamtampubolon)
 
 ## 🙏 Acknowledgments
 
@@ -241,9 +237,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 If you have any questions or issues:
 
-1. Check the [Issues](https://github.com/yourusername/mental-health-predictor/issues) page
+1. Check the [Issues](https://github.com/baniadamtampubolon/mental-health-predictor/issues) page
 2. Create a new issue if your problem isn't already reported
-3. Contact: your.email@example.com
+3. Contact: baniadam.tampubolon@gmail.com
 
 ---
 
