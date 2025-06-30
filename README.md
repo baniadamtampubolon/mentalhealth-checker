@@ -51,8 +51,8 @@ Before running this application, make sure you have:
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/mental-health-predictor.git
-   cd mental-health-predictor
+   git clone https://github.com/baniadamtampubolon/mentalhealth-checker.git
+   cd mentalhealth-checker
    ```
 
 2. **Create a virtual environment**
