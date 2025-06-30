@@ -9,6 +9,11 @@ A web-based machine learning application that predicts mental health conditions 
 
 ## 🎯 Features
 
+![image](https://github.com/user-attachments/assets/8724619e-d26e-41e3-a804-9ff049862b84)
+![image](https://github.com/user-attachments/assets/46176dad-0c4f-4d83-8d25-6ebbe3c893bd)
+
+
+
 - **Mental Health Prediction**: Predict 13 different mental health conditions
 - **Interactive Web Interface**: User-friendly form for input data
 - **Data Visualization**: Dynamic charts showing prediction confidence
