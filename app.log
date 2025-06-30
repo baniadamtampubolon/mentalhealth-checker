@@ -20,3 +20,38 @@
 2025-06-30 12:26:06,502 - INFO - Prediction: Loneliness (41.23%) - Time: 0.119s
 2025-06-30 12:26:06,504 - INFO - 127.0.0.1 - - [30/Jun/2025 12:26:06] "POST / HTTP/1.1" 200 -
 2025-06-30 12:26:10,847 - INFO - 127.0.0.1 - - [30/Jun/2025 12:26:10] "GET / HTTP/1.1" 200 -
+2025-06-30 12:31:14,496 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-06-30 12:31:14,504 - INFO - Model loaded successfully from model/mental_health_model-2.h5
+2025-06-30 12:31:14,539 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-30 12:31:14,540 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-30 12:31:14,544 - INFO -  * Restarting with stat
+2025-06-30 12:31:26,951 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-06-30 12:31:26,959 - INFO - Model loaded successfully from model/mental_health_model-2.h5
+2025-06-30 12:31:26,977 - WARNING -  * Debugger is active!
+2025-06-30 12:31:26,990 - INFO -  * Debugger PIN: 751-974-018
+2025-06-30 12:31:27,400 - INFO - 127.0.0.1 - - [30/Jun/2025 12:31:27] "GET / HTTP/1.1" 200 -
+2025-06-30 12:32:14,811 - INFO - Prediction: Bipolar (31.10%) - Time: 0.208s
+2025-06-30 12:32:14,821 - INFO - 127.0.0.1 - - [30/Jun/2025 12:32:14] "POST / HTTP/1.1" 200 -
+2025-06-30 12:35:31,046 - INFO - Prediction: Bipolar (31.10%) - Time: 0.137s
+2025-06-30 12:35:31,063 - INFO - 127.0.0.1 - - [30/Jun/2025 12:35:31] "POST / HTTP/1.1" 200 -
+2025-06-30 12:37:13,479 - INFO - 127.0.0.1 - - [30/Jun/2025 12:37:13] "GET / HTTP/1.1" 200 -
+2025-06-30 12:37:15,921 - INFO - 127.0.0.1 - - [30/Jun/2025 12:37:15] "GET / HTTP/1.1" 200 -
+2025-06-30 12:37:18,254 - INFO - 127.0.0.1 - - [30/Jun/2025 12:37:18] "GET / HTTP/1.1" 200 -
+2025-06-30 12:38:35,674 - INFO - 127.0.0.1 - - [30/Jun/2025 12:38:35] "GET / HTTP/1.1" 200 -
+2025-06-30 12:38:35,892 - INFO - 127.0.0.1 - - [30/Jun/2025 12:38:35] "[33mGET /static/images/favicon.ico HTTP/1.1[0m" 404 -
+2025-06-30 12:39:02,523 - INFO - 127.0.0.1 - - [30/Jun/2025 12:39:02] "GET / HTTP/1.1" 200 -
+2025-06-30 12:39:04,001 - INFO - 127.0.0.1 - - [30/Jun/2025 12:39:04] "GET / HTTP/1.1" 200 -
+2025-06-30 12:39:04,235 - INFO - 127.0.0.1 - - [30/Jun/2025 12:39:04] "GET / HTTP/1.1" 200 -
+2025-06-30 12:39:04,593 - INFO - 127.0.0.1 - - [30/Jun/2025 12:39:04] "GET / HTTP/1.1" 200 -
+2025-06-30 12:39:04,984 - INFO - 127.0.0.1 - - [30/Jun/2025 12:39:04] "GET / HTTP/1.1" 200 -
+2025-06-30 12:39:05,637 - INFO - 127.0.0.1 - - [30/Jun/2025 12:39:05] "GET / HTTP/1.1" 200 -
+2025-06-30 12:40:32,333 - INFO - 127.0.0.1 - - [30/Jun/2025 12:40:32] "GET / HTTP/1.1" 200 -
+2025-06-30 12:40:33,463 - INFO - 127.0.0.1 - - [30/Jun/2025 12:40:33] "GET / HTTP/1.1" 200 -
+2025-06-30 12:41:16,263 - INFO - 127.0.0.1 - - [30/Jun/2025 12:41:16] "GET / HTTP/1.1" 200 -
+2025-06-30 12:43:56,306 - INFO - 127.0.0.1 - - [30/Jun/2025 12:43:56] "GET / HTTP/1.1" 200 -
+2025-06-30 12:43:56,687 - INFO - 127.0.0.1 - - [30/Jun/2025 12:43:56] "GET /static/images/favicon.png?v=1 HTTP/1.1" 200 -
+2025-06-30 12:44:18,400 - INFO - 127.0.0.1 - - [30/Jun/2025 12:44:18] "GET / HTTP/1.1" 200 -
+2025-06-30 12:44:19,100 - INFO - 127.0.0.1 - - [30/Jun/2025 12:44:19] "GET /static/images/favicon.png?v=1 HTTP/1.1" 200 -
+2025-06-30 12:45:00,016 - INFO - Prediction: Loneliness (62.60%) - Time: 0.160s
+2025-06-30 12:45:00,016 - INFO - 127.0.0.1 - - [30/Jun/2025 12:45:00] "POST / HTTP/1.1" 200 -
