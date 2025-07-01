@@ -55,3 +55,112 @@
 2025-06-30 12:44:19,100 - INFO - 127.0.0.1 - - [30/Jun/2025 12:44:19] "GET /static/images/favicon.png?v=1 HTTP/1.1" 200 -
 2025-06-30 12:45:00,016 - INFO - Prediction: Loneliness (62.60%) - Time: 0.160s
 2025-06-30 12:45:00,016 - INFO - 127.0.0.1 - - [30/Jun/2025 12:45:00] "POST / HTTP/1.1" 200 -
+2025-06-30 12:53:14,251 - INFO - 127.0.0.1 - - [30/Jun/2025 12:53:14] "GET / HTTP/1.1" 200 -
+2025-06-30 12:59:57,664 - INFO - 127.0.0.1 - - [30/Jun/2025 12:59:57] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-06-30 13:01:20,754 - INFO - Prediction: ASD (40.00%) - Time: 0.175s
+2025-06-30 13:01:20,755 - INFO - 127.0.0.1 - - [30/Jun/2025 13:01:20] "POST / HTTP/1.1" 200 -
+2025-06-30 13:01:20,820 - INFO - 127.0.0.1 - - [30/Jun/2025 13:01:20] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-06-30 13:01:36,750 - INFO - 127.0.0.1 - - [30/Jun/2025 13:01:36] "GET / HTTP/1.1" 200 -
+2025-06-30 13:01:36,820 - INFO - 127.0.0.1 - - [30/Jun/2025 13:01:36] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-06-30 13:01:48,279 - INFO - 127.0.0.1 - - [30/Jun/2025 13:01:48] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-06-30 13:07:56,531 - INFO - Prediction: ASD (40.00%) - Time: 0.159s
+2025-06-30 13:07:56,532 - INFO - 127.0.0.1 - - [30/Jun/2025 13:07:56] "POST / HTTP/1.1" 200 -
+2025-06-30 22:35:08,816 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-06-30 22:35:08,847 - INFO - Model loaded successfully from model/mental_health_model-2.h5
+2025-06-30 22:35:08,912 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-30 22:35:08,913 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-30 22:35:08,918 - INFO -  * Restarting with stat
+2025-06-30 22:35:20,307 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-06-30 22:35:20,323 - INFO - Model loaded successfully from model/mental_health_model-2.h5
+2025-06-30 22:35:20,339 - WARNING -  * Debugger is active!
+2025-06-30 22:35:20,352 - INFO -  * Debugger PIN: 751-974-018
+2025-06-30 22:35:25,837 - INFO - 127.0.0.1 - - [30/Jun/2025 22:35:25] "GET / HTTP/1.1" 200 -
+2025-06-30 22:35:25,950 - INFO - 127.0.0.1 - - [30/Jun/2025 22:35:25] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-06-30 22:36:20,965 - INFO - 127.0.0.1 - - [30/Jun/2025 22:36:20] "GET / HTTP/1.1" 200 -
+2025-06-30 22:36:21,010 - INFO - 127.0.0.1 - - [30/Jun/2025 22:36:21] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-30 22:36:21,224 - INFO - 127.0.0.1 - - [30/Jun/2025 22:36:21] "[36mGET /static/images/favicon.png?v=1 HTTP/1.1[0m" 304 -
+2025-06-30 22:38:32,175 - INFO - 127.0.0.1 - - [30/Jun/2025 22:38:32] "GET / HTTP/1.1" 200 -
+2025-06-30 22:38:32,214 - INFO - 127.0.0.1 - - [30/Jun/2025 22:38:32] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-30 22:38:32,407 - INFO - 127.0.0.1 - - [30/Jun/2025 22:38:32] "[36mGET /static/images/favicon.png?v=1 HTTP/1.1[0m" 304 -
+2025-06-30 22:38:44,327 - INFO - Prediction: OCD (31.70%) - Time: 0.477s
+2025-06-30 22:38:44,327 - INFO - 127.0.0.1 - - [30/Jun/2025 22:38:44] "POST / HTTP/1.1" 200 -
+2025-06-30 22:38:44,378 - INFO - 127.0.0.1 - - [30/Jun/2025 22:38:44] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-30 22:40:08,587 - INFO - Prediction: OCD (31.70%) - Time: 0.153s
+2025-06-30 22:40:08,593 - INFO - 127.0.0.1 - - [30/Jun/2025 22:40:08] "POST / HTTP/1.1" 200 -
+2025-06-30 22:40:08,626 - INFO - 127.0.0.1 - - [30/Jun/2025 22:40:08] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-30 22:40:08,734 - INFO - 127.0.0.1 - - [30/Jun/2025 22:40:08] "[36mGET /static/images/favicon.png?v=1 HTTP/1.1[0m" 304 -
+2025-06-30 22:40:12,627 - INFO - 127.0.0.1 - - [30/Jun/2025 22:40:12] "GET / HTTP/1.1" 200 -
+2025-06-30 22:40:12,677 - INFO - 127.0.0.1 - - [30/Jun/2025 22:40:12] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-30 22:42:35,335 - INFO - Prediction: Bipolar (27.20%) - Time: 0.134s
+2025-06-30 22:42:35,336 - INFO - 127.0.0.1 - - [30/Jun/2025 22:42:35] "POST / HTTP/1.1" 200 -
+2025-06-30 22:42:35,371 - INFO - 127.0.0.1 - - [30/Jun/2025 22:42:35] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-30 22:43:02,896 - INFO - 127.0.0.1 - - [30/Jun/2025 22:43:02] "GET / HTTP/1.1" 200 -
+2025-06-30 22:43:02,939 - INFO - 127.0.0.1 - - [30/Jun/2025 22:43:02] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-30 22:44:24,674 - INFO - Prediction: Loneliness (31.83%) - Time: 0.145s
+2025-06-30 22:44:24,677 - INFO - 127.0.0.1 - - [30/Jun/2025 22:44:24] "POST / HTTP/1.1" 200 -
+2025-06-30 22:44:24,716 - INFO - 127.0.0.1 - - [30/Jun/2025 22:44:24] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-30 22:47:37,118 - INFO - Prediction: Loneliness (31.83%) - Time: 0.146s
+2025-06-30 22:47:37,127 - INFO - 127.0.0.1 - - [30/Jun/2025 22:47:37] "POST / HTTP/1.1" 200 -
+2025-06-30 22:47:37,157 - INFO - 127.0.0.1 - - [30/Jun/2025 22:47:37] "GET /static/css/style-result.css HTTP/1.1" 200 -
+2025-06-30 22:47:37,225 - INFO - 127.0.0.1 - - [30/Jun/2025 22:47:37] "[36mGET /static/images/favicon.png?v=1 HTTP/1.1[0m" 304 -
+2025-06-30 22:47:39,605 - INFO - 127.0.0.1 - - [30/Jun/2025 22:47:39] "GET / HTTP/1.1" 200 -
+2025-06-30 22:47:39,649 - INFO - 127.0.0.1 - - [30/Jun/2025 22:47:39] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-06-30 22:48:13,501 - INFO - 127.0.0.1 - - [30/Jun/2025 22:48:13] "GET / HTTP/1.1" 200 -
+2025-06-30 22:48:13,598 - INFO - 127.0.0.1 - - [30/Jun/2025 22:48:13] "[36mGET /static/images/favicon.png?v=1 HTTP/1.1[0m" 304 -
+2025-06-30 22:48:45,330 - INFO - 127.0.0.1 - - [30/Jun/2025 22:48:45] "GET / HTTP/1.1" 200 -
+2025-06-30 22:48:45,358 - INFO - 127.0.0.1 - - [30/Jun/2025 22:48:45] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-30 22:48:45,429 - INFO - 127.0.0.1 - - [30/Jun/2025 22:48:45] "[36mGET /static/images/favicon.png?v=1 HTTP/1.1[0m" 304 -
+2025-06-30 22:49:05,931 - INFO - 127.0.0.1 - - [30/Jun/2025 22:49:05] "GET / HTTP/1.1" 200 -
+2025-06-30 22:49:06,172 - INFO - 127.0.0.1 - - [30/Jun/2025 22:49:06] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-06-30 22:50:54,871 - INFO - 127.0.0.1 - - [30/Jun/2025 22:50:54] "GET / HTTP/1.1" 200 -
+2025-06-30 22:50:55,078 - INFO - 127.0.0.1 - - [30/Jun/2025 22:50:55] "[36mGET /static/images/favicon.png?v=1 HTTP/1.1[0m" 304 -
+2025-06-30 22:52:54,242 - INFO - 127.0.0.1 - - [30/Jun/2025 22:52:54] "GET / HTTP/1.1" 200 -
+2025-06-30 22:52:54,285 - INFO - 127.0.0.1 - - [30/Jun/2025 22:52:54] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-06-30 22:52:54,505 - INFO - 127.0.0.1 - - [30/Jun/2025 22:52:54] "[36mGET /static/images/favicon.png?v=1 HTTP/1.1[0m" 304 -
+2025-06-30 22:53:30,683 - INFO - Prediction: Loneliness (73.93%) - Time: 0.151s
+2025-06-30 22:53:30,685 - INFO - 127.0.0.1 - - [30/Jun/2025 22:53:30] "POST / HTTP/1.1" 200 -
+2025-06-30 22:53:30,730 - INFO - 127.0.0.1 - - [30/Jun/2025 22:53:30] "[36mGET /static/css/style-result.css HTTP/1.1[0m" 304 -
+2025-06-30 22:53:37,094 - INFO - 127.0.0.1 - - [30/Jun/2025 22:53:37] "GET / HTTP/1.1" 200 -
+2025-06-30 22:53:37,141 - INFO - 127.0.0.1 - - [30/Jun/2025 22:53:37] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-30 22:53:42,013 - INFO - Prediction: Loneliness (65.00%) - Time: 0.166s
+2025-06-30 22:53:42,013 - INFO - 127.0.0.1 - - [30/Jun/2025 22:53:42] "POST / HTTP/1.1" 200 -
+2025-06-30 22:53:42,063 - INFO - 127.0.0.1 - - [30/Jun/2025 22:53:42] "[36mGET /static/css/style-result.css HTTP/1.1[0m" 304 -
+2025-06-30 22:53:46,211 - INFO - 127.0.0.1 - - [30/Jun/2025 22:53:46] "GET / HTTP/1.1" 200 -
+2025-06-30 22:53:46,273 - INFO - 127.0.0.1 - - [30/Jun/2025 22:53:46] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-30 22:53:59,862 - INFO - Prediction: ASD (37.55%) - Time: 0.172s
+2025-06-30 22:53:59,864 - INFO - 127.0.0.1 - - [30/Jun/2025 22:53:59] "POST / HTTP/1.1" 200 -
+2025-06-30 22:53:59,906 - INFO - 127.0.0.1 - - [30/Jun/2025 22:53:59] "[36mGET /static/css/style-result.css HTTP/1.1[0m" 304 -
+2025-06-30 22:54:47,680 - INFO - 127.0.0.1 - - [30/Jun/2025 22:54:47] "GET / HTTP/1.1" 200 -
+2025-06-30 22:54:47,775 - INFO - 127.0.0.1 - - [30/Jun/2025 22:54:47] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-06-30 22:54:48,074 - INFO - 127.0.0.1 - - [30/Jun/2025 22:54:48] "[36mGET /static/images/favicon.png?v=1 HTTP/1.1[0m" 304 -
+2025-06-30 23:03:11,915 - INFO - 127.0.0.1 - - [30/Jun/2025 23:03:11] "GET / HTTP/1.1" 200 -
+2025-06-30 23:03:11,965 - INFO - 127.0.0.1 - - [30/Jun/2025 23:03:11] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-30 23:03:39,836 - INFO - Prediction: Loneliness (55.94%) - Time: 0.167s
+2025-06-30 23:03:39,840 - INFO - 127.0.0.1 - - [30/Jun/2025 23:03:39] "POST / HTTP/1.1" 200 -
+2025-06-30 23:03:39,882 - INFO - 127.0.0.1 - - [30/Jun/2025 23:03:39] "[36mGET /static/css/style-result.css HTTP/1.1[0m" 304 -
+2025-06-30 23:05:17,853 - INFO - 127.0.0.1 - - [30/Jun/2025 23:05:17] "GET / HTTP/1.1" 200 -
+2025-06-30 23:05:17,902 - INFO - 127.0.0.1 - - [30/Jun/2025 23:05:17] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-30 23:05:25,447 - INFO - 127.0.0.1 - - [30/Jun/2025 23:05:25] "GET / HTTP/1.1" 200 -
+2025-06-30 23:05:25,479 - INFO - 127.0.0.1 - - [30/Jun/2025 23:05:25] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-30 23:05:25,562 - INFO - 127.0.0.1 - - [30/Jun/2025 23:05:25] "[36mGET /static/images/favicon.png?v=1 HTTP/1.1[0m" 304 -
+2025-06-30 23:05:32,630 - INFO - 127.0.0.1 - - [30/Jun/2025 23:05:32] "GET / HTTP/1.1" 200 -
+2025-06-30 23:05:32,712 - INFO - 127.0.0.1 - - [30/Jun/2025 23:05:32] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-30 23:05:33,056 - INFO - 127.0.0.1 - - [30/Jun/2025 23:05:33] "[36mGET /static/images/favicon.png?v=1 HTTP/1.1[0m" 304 -
+2025-06-30 23:06:00,597 - INFO - Prediction: Sleeping Disorder (27.89%) - Time: 0.138s
+2025-06-30 23:06:00,613 - INFO - 127.0.0.1 - - [30/Jun/2025 23:06:00] "POST / HTTP/1.1" 200 -
+2025-06-30 23:06:00,683 - INFO - 127.0.0.1 - - [30/Jun/2025 23:06:00] "GET /static/css/style-result.css HTTP/1.1" 200 -
+2025-06-30 23:07:22,358 - INFO - 127.0.0.1 - - [30/Jun/2025 23:07:22] "GET / HTTP/1.1" 200 -
+2025-06-30 23:07:22,406 - INFO - 127.0.0.1 - - [30/Jun/2025 23:07:22] "GET /static/js/script.js HTTP/1.1" 200 -
+2025-06-30 23:07:22,412 - INFO - 127.0.0.1 - - [30/Jun/2025 23:07:22] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-30 23:07:22,551 - INFO - 127.0.0.1 - - [30/Jun/2025 23:07:22] "[36mGET /static/images/favicon.png?v=1 HTTP/1.1[0m" 304 -
+2025-06-30 23:07:30,173 - INFO - Prediction: PTSD (58.15%) - Time: 0.146s
+2025-06-30 23:07:30,174 - INFO - 127.0.0.1 - - [30/Jun/2025 23:07:30] "POST / HTTP/1.1" 200 -
+2025-06-30 23:07:30,208 - INFO - 127.0.0.1 - - [30/Jun/2025 23:07:30] "[36mGET /static/css/style-result.css HTTP/1.1[0m" 304 -
+2025-06-30 23:08:26,453 - INFO - 127.0.0.1 - - [30/Jun/2025 23:08:26] "GET / HTTP/1.1" 200 -
+2025-06-30 23:08:26,535 - INFO - 127.0.0.1 - - [30/Jun/2025 23:08:26] "GET /static/js/script.js HTTP/1.1" 200 -
+2025-06-30 23:08:26,535 - INFO - 127.0.0.1 - - [30/Jun/2025 23:08:26] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-30 23:08:32,361 - INFO - Prediction: Bipolar (56.56%) - Time: 0.147s
+2025-06-30 23:08:32,368 - INFO - 127.0.0.1 - - [30/Jun/2025 23:08:32] "POST / HTTP/1.1" 200 -
+2025-06-30 23:08:32,426 - INFO - 127.0.0.1 - - [30/Jun/2025 23:08:32] "[36mGET /static/css/style-result.css HTTP/1.1[0m" 304 -
+2025-06-30 23:08:32,437 - INFO - 127.0.0.1 - - [30/Jun/2025 23:08:32] "GET /static/js/result.js HTTP/1.1" 200 -
