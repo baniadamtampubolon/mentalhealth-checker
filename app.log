@@ -259,3 +259,5 @@
 2025-07-04 23:16:35,072 - INFO - 127.0.0.1 - - [04/Jul/2025 23:16:35] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
 2025-07-05 00:09:28,251 - INFO -  * Detected change in 'D:\\PROJECT\\mental-health-predictor\\app.py', reloading
 2025-07-05 00:09:33,464 - INFO -  * Restarting with stat
+2025-07-05 00:09:51,210 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-07-05 00:09:51,219 - INFO - Model loaded successfully from model/mental_health_model-2.h5
