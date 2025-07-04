@@ -19,9 +19,7 @@ notebooks/
 .ipynb_checkpoints
 
 # Model and history files
-*.h5
-model/
-history/
+
 
 # OS-generated files
 .DS_Store
