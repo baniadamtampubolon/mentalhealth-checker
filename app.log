@@ -257,3 +257,4 @@
 2025-07-04 23:16:09,133 - INFO - 127.0.0.1 - - [04/Jul/2025 23:16:09] "[36mGET /static/js/result.js HTTP/1.1[0m" 304 -
 2025-07-04 23:16:21,011 - INFO - 127.0.0.1 - - [04/Jul/2025 23:16:21] "GET / HTTP/1.1" 200 -
 2025-07-04 23:16:35,072 - INFO - 127.0.0.1 - - [04/Jul/2025 23:16:35] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-07-05 00:09:28,251 - INFO -  * Detected change in 'D:\\PROJECT\\mental-health-predictor\\app.py', reloading
