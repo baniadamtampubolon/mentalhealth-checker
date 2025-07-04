@@ -1,3 +1,5 @@
+// static/js/result.js
+// This file contains the JavaScript code for the result page of the mental health predictor web application
 // Add entrance animations
 document.addEventListener('DOMContentLoaded', function() {
     // Animate elements on load

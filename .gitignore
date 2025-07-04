@@ -1,0 +1,32 @@
+# Python virtual environment
+venv/
+.venv/
+ENV/
+env/
+
+# Python cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Log files
+*.log
+app.log
+
+# Jupyter Notebooks & Checkpoints
+notebooks/
+.ipynb_checkpoints
+
+# Model and history files
+*.h5
+model/
+history/
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+
+# IDE configuration
+.vscode/
+.idea/

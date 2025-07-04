@@ -1,0 +1,49 @@
+/* static/css/landing.css */
+
+body {
+font-family: 'Inter', sans-serif;
+background: linear-gradient(135deg, #667eea, #764ba2);
+color: white;
+text-align: center;
+padding-top: 10vh;
+}
+
+.logo {
+width: 100px;
+margin-bottom: 20px;
+}
+
+.title {
+font-size: 2.5rem;
+font-weight: 700;
+}
+
+.subtitle {
+font-size: 1.2rem;
+margin-bottom: 40px;
+}
+
+.btn-start {
+padding: 15px 30px;
+font-size: 1.1rem;
+border-radius: 50px;
+font-weight: 600;
+background-color: white;
+color: #667eea;
+border: none;
+transition: all 0.3s ease;
+}
+
+.btn-start:hover {
+transform: translateY(-3px);
+box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+background-color: #f0f0f0;
+}
+
+footer {
+position: fixed;
+bottom: 10px;
+width: 100%;
+font-size: 0.9rem;
+color: rgba(255,255,255,0.7);
+}

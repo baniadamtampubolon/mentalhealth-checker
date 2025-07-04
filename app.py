@@ -55,7 +55,7 @@ def load_ml_model():
         else:
             logging.error(f"Model file not found at {MODEL_PATH}")
             # Fallback ke path dengan backslash
-            fallback_path = 'model\\mental_health_model-2.h5'
+            fallback_path = 'model/mental_health_model-2.h5'
             if os.path.exists(fallback_path):
                 model = load_model(fallback_path)
                 logging.info(f"Model loaded from fallback path: {fallback_path}")
@@ -171,14 +171,14 @@ def create_simple_plot(predicted_percentages):
     
     return plot_url
 
-@app.route('/', methods=['GET', 'POST'])
+@app.route('/form', methods=['GET', 'POST'])
 def index():
     if request.method == 'POST':
         try:
             # Check if model is loaded
             if model is None:
                 logging.error("Model not loaded")
-                return render_template('index.html', error="Model not loaded. Please contact administrator.")
+                return render_template('form.html', error="Model not loaded. Please contact administrator.")
             
             # Validate and get input data
             input_data = validate_input_data(request.form)
@@ -212,9 +212,9 @@ def index():
             
         except Exception as e:
             logging.error(f"Error during prediction: {str(e)}")
-            return render_template('index.html', error=f"Error during prediction: {str(e)}")
+            return render_template('form.html', error=f"Error during prediction: {str(e)}")
 
-    return render_template('index.html')
+    return render_template('form.html')
 
 @app.route('/api/predict', methods=['POST'])
 def api_predict():
@@ -263,6 +263,11 @@ try:
         logging.warning("Model could not be loaded at startup")
 except Exception as e:
     logging.error(f"Error during model loading at startup: {str(e)}")
+
+@app.route('/')
+def landing_page():
+    return render_template('index.html')
+
 
 if __name__ == '__main__':
     app.run(debug=True)

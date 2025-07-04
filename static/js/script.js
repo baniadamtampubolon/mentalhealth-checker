@@ -1,3 +1,5 @@
+// static/js/script.js
+// This file contains the JavaScript code for the mental health predictor web application.
 // Progress bar functionality
 function updateProgressBar() {
     const scrollTop = window.pageYOffset;
